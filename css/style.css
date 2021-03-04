@@ -1,5 +1,69 @@
+@font-face {
+  font-family: "Verdana";
+  src: url("/fonts/verdana-italic.ttf");
+}
+@font-face {
+  font-family: "Europe";
+  src: url("/fonts/europe.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
 body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1030px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 20px 0;
+}
+.header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header__phone a {
+  font-family: "Europe";
+  color: #eb5017;
+  font-size: 18px;
+  line-height: 1.1;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header__phone a:hover {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #d24614;
 }
