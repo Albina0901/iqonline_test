@@ -50,18 +50,18 @@
                         </div>
                         <div class="calculate__inner">
                             <h2 class="calculate__title">Калькулятор  </h2>
-                            <form class="calculate__form" action="#">
-                                <label>Дата оформления вклада <input type="text" id="datepicker" name="date" value="дд/мм/гг"></label>
+                            <form class="calculate__form" action="calc.php" method="POST">
+                                <label>Дата оформления вклада <input type="text" id="datepicker" name="date" placeholder="дд.мм.гг"></label>
                                 <label>Сумма вклада <input class="cl" type="text" name="sum"> 
                                     <input type="range" min="1000" max="3000000" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <label>Срок вклада
                                     <select name="years">
-                                        <option value="">1 год</option>
-                                        <option value="">2 года</option>
-                                        <option value="">3 года</option>
-                                        <option value="">4 года</option>
-                                        <option value="">5 лет</option>
+                                        <option value="1">1 год</option>
+                                        <option value="2">2 года</option>
+                                        <option value="3">3 года</option>
+                                        <option value="4">4 года</option>
+                                        <option value="5">5 лет</option>
                                     </select>
                                 </label>
                                 <label>Пополнение вклада
@@ -74,7 +74,7 @@
                                     <input type="range" min="1000" max="3000000" step="1000" value="10000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <button class="calculate__btn" type="submit">Рассчитать</button>
-                                <span class="calculate__sum">Результат: <span>10 250 руб</span></span>
+                                <span class="calculate__sum">Результат: <span></span></span>
                             </form>
                         </div>
                     </div>
@@ -101,10 +101,13 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $( function() {
-          $( "#datepicker" ).datepicker();
+          $( "#datepicker" ).datepicker({
+            dateFormat: 'dd.mm.yy',
+          });
         } );
     </script>
     <!-- /Datepicker script -->
     <script src="js/rangeslider.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
