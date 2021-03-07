@@ -53,7 +53,7 @@
                             <form class="calculate__form" action="calc.php" method="POST">
                                 <label>Дата оформления вклада <input type="text" id="datepicker" name="date" placeholder="дд.мм.гг"></label>
                                 <label>Сумма вклада <input class="cl" type="text" name="sum"> 
-                                    <input type="range" min="1000" max="3000000" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
+                                    <input type="range" min="1000" max="3000000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <label>Срок вклада
                                     <select name="years">
@@ -70,7 +70,7 @@
                                         <input type="radio" name="radio" id="2"><label for="2">Да</label>
                                     </span>
                                 </label>
-                                <label>Сумма пополнения вклада <input type="text" name="sum1">
+                                <label>Сумма пополнения вклада <input class="cl" type="text" name="sum1">
                                     <input type="range" min="1000" max="3000000" step="1000" value="10000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <button class="calculate__btn" type="submit">Рассчитать</button>
