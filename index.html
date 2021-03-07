@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Datepicker style -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>World Bank</title>
 </head>
 <body>
@@ -49,15 +51,17 @@
                         <div class="calculate__inner">
                             <h2 class="calculate__title">Калькулятор  </h2>
                             <form class="calculate__form" action="#">
-                                <label>Дата оформления вклада <input type="date"></label>
-                                <label>Сумма вклада <input type="text"> <input class="calculate__range" type="range" id="range" min="1000" max="3000000" value="1"></input></label>
+                                <label>Дата оформления вклада <input type="text" id="datepicker" name="date" value="дд/мм/гг"></label>
+                                <label>Сумма вклада <input class="cl" type="text" name="sum"> 
+                                    <input type="range" min="1000" max="3000000" data-rangeslider="" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
+                                </label>
                                 <label>Срок вклада
-                                    <select name="">
+                                    <select name="years">
                                         <option value="">1 год</option>
                                         <option value="">2 года</option>
                                         <option value="">3 года</option>
                                         <option value="">4 года</option>
-                                        <option value="">5 года</option>
+                                        <option value="">5 лет</option>
                                     </select>
                                 </label>
                                 <label>Пополнение вклада
@@ -66,7 +70,9 @@
                                         <input type="radio" name="radio" id="2"><label for="2">Да</label>
                                     </span>
                                 </label>
-                                <label>Сумма пополнения вклада <input type="text"> <input class="calculate__range" type="range" id="range" min="1000" max="3000000" value="1"></input></label>
+                                <label>Сумма пополнения вклада <input type="text" name="sum1">
+                                    <input type="range" min="1000" max="3000000" step="1000" value="10000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
+                                </label>
                                 <button class="calculate__btn" type="submit">Рассчитать</button>
                                 <span class="calculate__sum">Результат: <span>10 250 руб</span></span>
                             </form>
@@ -90,5 +96,15 @@
             </div>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Datepicker script -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+    </script>
+    <!-- /Datepicker script -->
+    <script src="js/rangeslider.js"></script>
 </body>
 </html>
