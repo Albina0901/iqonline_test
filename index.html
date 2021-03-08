@@ -52,8 +52,8 @@
                             <h2 class="calculate__title">Калькулятор  </h2>
                             <form class="calculate__form" action="calc.php" method="POST">
                                 <label>Дата оформления вклада <input type="text" id="datepicker" name="date" placeholder="дд.мм.гг"></label>
-                                <label>Сумма вклада <input class="cl" type="text" name="sum"> 
-                                    <input type="range" min="1000" max="3000000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
+                                <label>Сумма вклада <input class="range_1" type="number" name="sum" min="1000" max="3000000"> 
+                                    <input type="range" class="cl" min="0" max="3000000" value="0" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <label>Срок вклада
                                     <select name="years">
@@ -66,12 +66,12 @@
                                 </label>
                                 <label>Пополнение вклада
                                     <span class="calculate__radio">
-                                        <input type="radio" name="radio" id="1" checked><label for="1">Нет</label>
-                                        <input type="radio" name="radio" id="2"><label for="2">Да</label>
+                                        <input type="radio" name="radio" id="1" checked value="0"><label for="1">Нет</label>
+                                        <input type="radio" name="radio" id="2" value="1"><label for="2">Да</label>
                                     </span>
                                 </label>
-                                <label>Сумма пополнения вклада <input class="cl" type="text" name="sum1">
-                                    <input type="range" min="1000" max="3000000" step="1000" value="10000" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
+                                <label>Сумма пополнения вклада <input class="range_2" type="number" name="sum1" min="1000" max="3000000" disabled>
+                                    <input type="range" class="cl1" min="0" max="3000000" value="0" data-rangeslider style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"> 
                                 </label>
                                 <button class="calculate__btn" type="submit">Рассчитать</button>
                                 <span class="calculate__sum">Результат: <span></span></span>

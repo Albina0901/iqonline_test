@@ -7,7 +7,7 @@
     $sum_vklad = $_POST['sum'];
     $sum_vklad1 = $_POST['sum1'];
 
-    if (!isset($_POST['submit']) && $sum_vklad !== '' && $date !== '') 
+    if (!isset($_POST['submit']) && $sum_vklad !== '' && $date !== '' && $sum_vklad1 !== '') 
     {
         // количество дней в месяце
         $days = cal_days_in_month(CAL_GREGORIAN, $month, $year);
